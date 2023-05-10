@@ -15,9 +15,9 @@
     "generate:graphQLSchema": "cross-env PAYLOAD_CONFIG_PATH=src/payload.config.ts payload generate:graphQLSchema"
   },
   "dependencies": {
-    "@aws-sdk/credential-provider-node": "^3.306.0",
+    "@aws-sdk/client-ses": "^3.327.0",
     "@types/nodemailer": "^6.4.7",
-    "aws-sdk": "^2.1348.0",
+    "aws-sdk": "^2.1374.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "moustache": "^0.0.4",

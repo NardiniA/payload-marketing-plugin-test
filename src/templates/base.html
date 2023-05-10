@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Email Template Base</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap');
+      body {
+        margin: 0;
+        font-family: "Work Sans", sans-serif;
+      }
+
+      table {
+        border-spacing: 0;
+      }
+
+      td {
+        padding: 0;
+      }
+
+      img {
+        border: 0;
+      }
+
+      .wrapper {
+        width: 100%;
+        table-layout: fixed;
+        background-color: #e6e3fb;
+        padding-bottom: 60px;
+      }
+
+      .main {
+        width: 100%;
+        max-width: 600px;
+        background-color: #f2f0ff;
+        font-family: sans-serif;
+        color: #505050;
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .content {
+        color: #505050;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 400;
+        line-height: 1.8;
+        font-size: 16px;
+      }
+
+      .content a {
+        color: #505050;
+      }
+
+      .content a:hover,
+      .content a:focus {
+        color: #000;
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+        font-family: "Crete Round", serif;
+        color: #2a2a2a;
+      }
+
+      .content img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 4px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 18px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        background-color: #7f8af0;
+        border: 2px solid #7f8af0;
+        border-radius: 4px;
+        color: #fff !important;
+        text-decoration: none;
+        font-weight: 500;
+        font-family: "Work Sans", sans-serif;
+        margin: 10px 8px 10px 0;
+      }
+
+      .button.outline {
+        background-color: transparent !important;
+        border-width: 1px;
+        color: #7f8af0 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <center class="wrapper">
+      <table class="main" width="100%">
+        <tr>
+          <td height="8" style="background-color: #e1dcff"></td>
+        </tr>
+
+        <!-- LOGO & SOCIAL MEDIA SECTION -->
+        <tr>
+          <td style="padding: 24px 0 24px">
+            <table width="100%">
+              <tr>
+                <td style="padding: 0 22px 10px; text-align: center;">
+                  <a href="#">
+                    <img
+                      src="https://admin.hughes.company/media/pershore-times-logo.png"
+                      alt="Logo"
+                      width="250"
+                      title="Logo"
+                    />
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- CONTENT SECTION -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td style="padding: 0 32px;" class="content">
+                  <img src="https://placehold.co/300x200.png" alt="#" width="600" />
+
+                  <h1>Heading 1</h1>
+
+                  <p>This is body text</p>
+
+                  <h2>Heading 2</h2>
+
+                  <p>This is body text</p>
+
+                  <h3>Heading 3</h3>
+
+                  <p>This is body text</p>
+                  
+                  <h4>Heading 4</h4>
+                  
+                  <p>This is body text</p>
+                  
+                  <h5>Heading 5</h5>
+                  
+                  <p>This is body text</p>
+                  
+                  <h6>Heading 6</h6>
+                  
+                  <p>This is body text</p>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <!-- FOOTER SECTION -->
+        <tr>
+          <td>
+            <table width="100%">
+              <tr>
+                <td style="padding: 45px 20px;" class="content">
+                  <p style="padding: 5px 0 3px; text-align: center;">© 2023 Pershore Times. All rights reserved.</p>
+                  <a href="#" style="display: block; padding: 3px; text-align: center;">Unsubscribe</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr>
+          <td height="8" style="background-color: #e1dcff"></td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>

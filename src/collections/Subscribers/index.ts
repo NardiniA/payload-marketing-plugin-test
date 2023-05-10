@@ -20,7 +20,7 @@ const Subscribers: CollectionConfig = {
         defaultColumns: ["fullname", "email"],
     },
     hooks: {
-        afterChange: [thankyou],
+        beforeChange: [thankyou],
     },
     fields: [
         {
@@ -34,6 +34,17 @@ const Subscribers: CollectionConfig = {
             label: "Email Address",
             type: "email",
             required: true,
+        },
+        {
+            name: "lists",
+            label: "Lists",
+            type: "relationship",
+            relationTo: "subscriber-lists",
+            hasMany: true,
+            required: false,
+            admin: {
+                position: "sidebar",
+            },
         },
     ],
 }
