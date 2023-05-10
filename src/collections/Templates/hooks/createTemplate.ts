@@ -1,4 +1,4 @@
-import type { BeforeChangeHook } from "payload/dist/collections/config/types";
+import type { CollectionBeforeChangeHook } from "payload/types";
 import { client as SESClient } from "../../../utilities/client";
 import {
   CreateTemplateCommand,
@@ -27,7 +27,7 @@ const updateSESTemplate = (data) => {
   });
 }
 
-export const createTemplate: BeforeChangeHook = async ({
+export const createTemplate: CollectionBeforeChangeHook = async ({
   data,
   req: { payload },
   operation,
@@ -47,7 +47,6 @@ export const createTemplate: BeforeChangeHook = async ({
     return data;
   } catch (err) {
     payload.logger.error(err);
-    console.log(JSON.stringify(err))
     return "Unable to create template.";
   }
 }

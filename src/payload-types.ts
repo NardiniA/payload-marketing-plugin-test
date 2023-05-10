@@ -8,6 +8,10 @@
 export interface Config {
   collections: {
     users: User;
+    subscribers: Subscriber;
+    'subscriber-lists': SubscriberList;
+    campaigns: Campaign;
+    templates: Template;
   };
   globals: {};
 }
@@ -24,4 +28,44 @@ export interface User {
   createdAt: string;
   updatedAt: string;
   password?: string;
+}
+export interface Subscriber {
+  id: string;
+  fullname: string;
+  email: string;
+  lists?: string[] | SubscriberList[];
+  createdAt: string;
+  updatedAt: string;
+}
+export interface SubscriberList {
+  id: string;
+  name: string;
+  createdAt: string;
+  updatedAt: string;
+}
+export interface Campaign {
+  id: string;
+  name: string;
+  type?: 'lists' | 'individual';
+  lists?: {
+    lists: string[] | SubscriberList[];
+  };
+  individuals?: {
+    subscribers: string[] | Subscriber[];
+  };
+  subject: string;
+  body: {
+    [k: string]: unknown;
+  }[];
+  createdAt: string;
+  updatedAt: string;
+}
+export interface Template {
+  id: string;
+  name: string;
+  subject: string;
+  html: string;
+  text: string;
+  createdAt: string;
+  updatedAt: string;
 }

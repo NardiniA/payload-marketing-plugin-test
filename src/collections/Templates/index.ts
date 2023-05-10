@@ -2,6 +2,8 @@ import type { CollectionConfig } from "payload/types";
 import { isAdminOrEditor } from "../../access/isAdminOrEditor";
 import { isAdmin } from "../../access/isAdmin";
 import { createTemplate } from "./hooks/createTemplate";
+import { deleteTemplate } from "./hooks/deleteTemplate";
+import { isDeveloper } from "../../access/isDeveloper";
 
 const Templates: CollectionConfig = {
   slug: "templates",
@@ -11,9 +13,11 @@ const Templates: CollectionConfig = {
   },
   access: {
     read: isAdminOrEditor,
-    create: isAdmin,
-    update: isAdmin,
-    delete: isAdmin,
+    create: isDeveloper,
+    update: isDeveloper,
+    delete: isDeveloper,
+    // @ts-ignore
+    admin: isDeveloper,
   },
   admin: {
     useAsTitle: "name",
@@ -22,7 +26,10 @@ const Templates: CollectionConfig = {
   hooks: {
     beforeChange: [
       createTemplate
-    ]
+    ],
+    afterDelete: [
+      deleteTemplate,
+    ],
   },
   fields: [
     {
@@ -31,6 +38,10 @@ const Templates: CollectionConfig = {
       type: "text",
       unique: true,
       required: true,
+      access: {
+        create: () => true,
+        update: () => false,
+      },
     },
     {
       name: "subject",
