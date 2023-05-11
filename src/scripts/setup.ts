@@ -1,0 +1,1 @@
+// Use this file to setup AWS SQS, Lambda and SES.

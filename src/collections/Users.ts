@@ -62,6 +62,7 @@ const Users: CollectionConfig = {
         create: isAdminFieldLevel,
         update: isAdminFieldLevel,
       },
+      hasMany: true,
       required: true,
     },
   ],
